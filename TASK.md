@@ -3,7 +3,9 @@
 ## Phase 1: Project Foundation
 
 ### Development Environment Setup
+
 **Priority: Critical**
+
 - [x] Create GitHub repository with proper README
 - [x] Set up React + TypeScript + Vite project structure
 - [ ] Configure ESLint, Prettier, and TypeScript strict mode
@@ -13,33 +15,37 @@
 - [ ] Create development, staging, and production environment configs
 
 ### Supabase Backend Setup
+
 **Priority: Critical**
+
 - [ ] Create Supabase project and configure settings
 - [ ] Design and implement database schema
-  - [ ] Users table with role-based fields
-  - [ ] Quizzes table with metadata fields
-  - [ ] Questions table with question types
-  - [ ] Choices table for multiple-choice options
-  - [ ] Attempts table for student submissions
-  - [ ] Results table for quiz analytics
-  - [ ] Notifications table
-  - [ ] Drafts table for work-in-progress quizzes
+    - [ ] Users table with role-based fields
+    - [ ] Quizzes table with metadata fields
+    - [ ] Questions table with question types
+    - [ ] Choices table for multiple-choice options
+    - [ ] Attempts table for student submissions
+    - [ ] Results table for quiz analytics
+    - [ ] Notifications table
+    - [ ] Drafts table for work-in-progress quizzes
 - [ ] Configure Row-Level Security (RLS) policies
 - [ ] Set up OAuth providers (Google)
 - [ ] Test database connections and basic CRUD operations
 
 ### Authentication Foundation
+
 **Priority: Critical**
+
 - [ ] Implement Supabase Auth integration
 - [ ] Create registration form with validation
-  - [ ] Email/password registration
-  - [ ] Google OAuth integration
-  - [ ] Form validation with proper error handling
-  - [ ] WCAG 2.1 AA compliance for forms
+    - [ ] Email/password registration
+    - [ ] Google OAuth integration
+    - [ ] Form validation with proper error handling
+    - [ ] WCAG 2.1 AA compliance for forms
 - [ ] Create login form with validation
-  - [ ] Email/password login
-  - [ ] Google OAuth login
-  - [ ] Remember me functionality
+    - [ ] Email/password login
+    - [ ] Google OAuth login
+    - [ ] Remember me functionality
 - [ ] Implement JWT session management
 - [ ] Create protected route components
 - [ ] Add logout functionality
@@ -48,34 +54,40 @@
 ## Phase 2: Core Quiz Management
 
 ### Admin Quiz Creation
+
 **Priority: High**
+
 - [ ] Design and implement quiz creation form
-  - [ ] Quiz metadata inputs (title, description, passing criteria)
-  - [ ] Timeframe selection (start/end dates)
-  - [ ] Dynamic question addition/removal
-  - [ ] True/false question type implementation
-  - [ ] Multiple-choice question type implementation
-  - [ ] Form validation and error handling
+    - [ ] Quiz metadata inputs (title, description, passing criteria)
+    - [ ] Timeframe selection (start/end dates)
+    - [ ] Dynamic question addition/removal
+    - [ ] True/false question type implementation
+    - [ ] Multiple-choice question type implementation
+    - [ ] Form validation and error handling
 - [ ] Create quiz preview functionality
 - [ ] Implement quiz saving to database
 - [ ] Add quiz publishing workflow
 - [ ] Create quiz listing page for admins
 
 ### Quiz Management Features
+
 **Priority: High**
+
 - [ ] Implement quiz editing functionality
-  - [ ] Load existing quiz data into forms
-  - [ ] Update quiz metadata and questions
-  - [ ] Handle version control for edited quizzes
+    - [ ] Load existing quiz data into forms
+    - [ ] Update quiz metadata and questions
+    - [ ] Handle version control for edited quizzes
 - [ ] Create quiz deletion feature
-  - [ ] Confirmation modal implementation
-  - [ ] Constraint checking (attempts exist)
-  - [ ] Cascade deletion handling
+    - [ ] Confirmation modal implementation
+    - [ ] Constraint checking (attempts exist)
+    - [ ] Cascade deletion handling
 - [ ] Add quiz search and filtering
 - [ ] Implement quiz status management (draft/published/archived)
 
 ### Data Validation & Security
+
 **Priority: High**
+
 - [ ] Implement comprehensive input validation
 - [ ] Add XSS protection for user-generated content
 - [ ] Create data sanitization functions
@@ -85,7 +97,9 @@
 ## Phase 3: Student Quiz Experience
 
 ### Quiz Discovery & Access
+
 **Priority: High**
+
 - [ ] Create student dashboard with available quizzes
 - [ ] Implement quiz filtering by timeframe
 - [ ] Add quiz search functionality for students
@@ -93,19 +107,23 @@
 - [ ] Implement access control for quiz attempts
 
 ### Quiz Taking Interface
+
 **Priority: Critical**
+
 - [ ] Design and implement quiz-taking UI
-  - [ ] Question navigation (previous/next)
-  - [ ] Answer selection interfaces
-  - [ ] Progress indicator
-  - [ ] Time remaining display (if applicable)
+    - [ ] Question navigation (previous/next)
+    - [ ] Answer selection interfaces
+    - [ ] Progress indicator
+    - [ ] Time remaining display (if applicable)
 - [ ] Create quiz submission workflow
 - [ ] Implement client-side answer validation
 - [ ] Add confirmation dialog for quiz submission
 - [ ] Handle quiz timeframe enforcement
 
 ### Quiz State Management
+
 **Priority: High**
+
 - [ ] Implement quiz session state management
 - [ ] Add auto-save functionality for in-progress attempts
 - [ ] Handle browser refresh/navigation scenarios
@@ -115,31 +133,37 @@
 ## Phase 4: Auto-Marking & Results
 
 ### Auto-Marking System
+
 **Priority: Critical**
+
 - [ ] Implement automatic quiz scoring algorithm
-  - [ ] True/false question scoring
-  - [ ] Multiple-choice question scoring
-  - [ ] Partial credit handling
+    - [ ] True/false question scoring
+    - [ ] Multiple-choice question scoring
+    - [ ] Partial credit handling
 - [ ] Create scoring calculation functions
 - [ ] Implement pass/fail determination logic
 - [ ] Add score storage to database
 - [ ] Create real-time score feedback for students
 
 ### Results Management
+
 **Priority: High**
+
 - [ ] Create student results viewing interface
-  - [ ] Past attempts listing
-  - [ ] Detailed attempt breakdown
-  - [ ] Score visualization
+    - [ ] Past attempts listing
+    - [ ] Detailed attempt breakdown
+    - [ ] Score visualization
 - [ ] Implement admin results dashboard
-  - [ ] Quiz-level analytics
-  - [ ] Student performance overview
-  - [ ] Statistical summaries
+    - [ ] Quiz-level analytics
+    - [ ] Student performance overview
+    - [ ] Statistical summaries
 - [ ] Add results export functionality
 - [ ] Create performance trend visualization
 
 ### Notification System (Basic)
+
 **Priority: Medium**
+
 - [ ] Implement basic notification infrastructure
 - [ ] Create notification components
 - [ ] Add quiz completion notifications
@@ -149,22 +173,26 @@
 ## Phase 5: Testing & Polish
 
 ### Testing Implementation
+
 **Priority: High**
+
 - [ ] Set up Jest and React Testing Library
 - [ ] Write unit tests for core functions
-  - [ ] Authentication functions
-  - [ ] Quiz validation logic
-  - [ ] Scoring algorithms
+    - [ ] Authentication functions
+    - [ ] Quiz validation logic
+    - [ ] Scoring algorithms
 - [ ] Create integration tests
-  - [ ] Quiz creation workflow
-  - [ ] Quiz taking workflow
-  - [ ] Results generation
+    - [ ] Quiz creation workflow
+    - [ ] Quiz taking workflow
+    - [ ] Results generation
 - [ ] Implement end-to-end tests with Playwright/Cypress
 - [ ] Add accessibility testing
 - [ ] Performance testing and optimization
 
 ### Accessibility & UX Polish
+
 **Priority: High**
+
 - [ ] Conduct WCAG 2.1 AA compliance audit
 - [ ] Implement keyboard navigation
 - [ ] Add screen reader support
@@ -174,7 +202,9 @@
 - [ ] Add tooltips and help text throughout the app
 
 ### Deployment & DevOps
+
 **Priority: Critical**
+
 - [ ] Set up Vercel deployment pipeline
 - [ ] Configure environment variables for production
 - [ ] Set up domain and SSL certificates
@@ -186,7 +216,9 @@
 ## Ongoing Tasks (Throughout Development)
 
 ### Documentation
+
 **Priority: Medium**
+
 - [ ] Maintain API documentation
 - [ ] Create user guides and help pages
 - [ ] Document component library
@@ -194,7 +226,9 @@
 - [ ] Create troubleshooting guides
 
 ### Code Quality
+
 **Priority: Medium**
+
 - [ ] Regular code reviews
 - [ ] Refactoring and technical debt management
 - [ ] Performance optimization
@@ -202,7 +236,9 @@
 - [ ] Dependency updates and maintenance
 
 ### User Feedback & Iteration
+
 **Priority: Medium**
+
 - [ ] Set up user feedback collection
 - [ ] Regular usability testing sessions
 - [ ] Bug tracking and resolution
@@ -223,6 +259,7 @@
 ## Definition of Done
 
 Each task is considered complete when:
+
 - [ ] Code is written and tested
 - [ ] Code review is completed
 - [ ] Documentation is updated

@@ -17,6 +17,7 @@ A comprehensive quiz management system that enables educators to create and mana
 ## Technology Stack
 
 ### Frontend
+
 - React 18+ with TypeScript
 - Material-UI (MUI) component library
 - React Router v7 (framework mode)
@@ -24,16 +25,18 @@ A comprehensive quiz management system that enables educators to create and mana
 - Vite for fast builds and development
 
 ### Backend
+
 - Supabase Backend-as-a-Service
-  - Authentication with JWT sessions
-  - PostgreSQL database
-  - Row-level security
-  - Object storage
+    - Authentication with JWT sessions
+    - PostgreSQL database
+    - Row-level security
+    - Object storage
 - C# with ASP.NET Core (for extended features)
 
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ installed
 - pnpm package manager installed (`npm install -g pnpm`)
 - Supabase account (for backend services)
@@ -95,9 +98,9 @@ netlify deploy --prod
 ## Project Structure
 
 - `/app` - Application source code
-  - `/routes` - Route components and handlers
-  - `/components` - Reusable UI components
-  - `/hooks` - Custom React hooks
-  - `/utils` - Helper functions and utilities
+    - `/routes` - Route components and handlers
+    - `/components` - Reusable UI components
+    - `/hooks` - Custom React hooks
+    - `/utils` - Helper functions and utilities
 - `/server` - Backend API extensions
 - `/public` - Static assets
