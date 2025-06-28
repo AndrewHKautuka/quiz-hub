@@ -1,0 +1,144 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# QuizHub AI IDE Rules
+
+## 🔄 Project Awareness & Context
+
+**Always read PLANNING.md** at the start of a new conversation to understand the project's architecture, goals, style, and constraints.
+
+**Check TASK.md** before starting a new task. If the task isn't listed, add it with a brief description and today's date.
+
+**Use consistent naming conventions, file structure, and architecture patterns** as described in PLANNING.md.
+
+**Reference the QuizHub specification document** for all functional and non-functional requirements, data models, and user stories when implementing features.
+
+## 🏗️ Architecture & Technology Stack
+
+**Frontend Development**
+- Use React with TypeScript as the primary frontend framework
+- Implement Material UI component library for all UI components
+- Follow responsive design principles to meet the ≤5 second page load time requirement
+- Ensure WCAG 2.1 Level AA compliance (≥85%) with proper tooltips on text fields
+
+**Backend Development**
+- Utilize Supabase's Backend-as-a-Service (BaaS) model as the primary backend
+- Extend with C# and ASP.NET framework only when Supabase capabilities are insufficient
+- Implement PostgreSQL as the relational database management system
+- Use Supabase object store for file storage needs
+
+**Authentication & Security**
+- Implement OAuth (Google) and email/password authentication flows
+- Use JWT sessions for secure user authentication
+- Enforce mandatory multi-factor authentication for admin accounts
+- Hash, salt, and pepper all passwords before storage
+- Ensure email address uniqueness across the system
+
+## 🧱 Code Structure & Modularity
+
+**Never create a file longer than 500 lines of code.** If a file approaches this limit, refactor by splitting it into modules or helper files.
+
+**Organize code into clearly separated modules** grouped by functional requirements (authentication, quiz management, user management, notifications).
+
+**Follow the soft deletion pattern** for user, quiz, question, choice, attempt, and result records (mark as deleted but retain in database).
+
+**Implement hard deletion** for draft and notification records (complete removal from database).
+
+**Use TypeScript interfaces and types** to match the specified data model relationships between entities.
+
+## 🧪 Testing & Reliability
+
+**Always create unit tests for new features** using Jest for React components and appropriate testing frameworks for backend logic.
+
+**Test all user stories** with comprehensive scenarios including happy path, validation errors, and edge cases.
+
+**After updating any logic**, verify that existing unit tests remain valid and update them if necessary.
+
+**Tests should be organized** to mirror the main application structure and cover all specified acceptance criteria.
+
+**Include performance testing** to verify page load times (P95 ≤5 seconds) and UI response times (P95 ≤300 milliseconds).
+
+## ✅ Task Completion & User Stories
+
+**Mark completed tasks in TASK.md** immediately after finishing them.
+
+**Map all development work** to specific user stories and functional requirements from the specification.
+
+**Implement features incrementally** following the agile development methodology specified in organizational requirements.
+
+**Verify each user story** meets its acceptance criteria before considering it complete.
+
+**Add discovered sub-tasks** to TASK.md under a "Discovered During Work" section when found during implementation.
+
+## 📎 Style & Conventions
+
+**Frontend Standards**
+- Use TypeScript strict mode with proper type definitions
+- Follow React functional component patterns with hooks
+- Implement Material UI theme consistency across all components
+- Use semantic HTML elements for accessibility compliance
+- Format code with Prettier and lint with ESLint
+
+**Backend Standards**
+- Follow C# coding conventions when extending beyond Supabase
+- Use proper async/await patterns for database operations
+- Implement comprehensive error handling and logging
+- Follow REST API design principles for any custom endpoints
+
+**Database Standards**
+- Use descriptive table and column names matching the data model
+- Implement proper foreign key constraints for all relationships
+- Add appropriate indexes for performance optimization
+- Follow PostgreSQL best practices for query optimization
+
+## 📚 Documentation & Explainability
+
+**Update README.md** when new features are added, dependencies change, or setup procedures are modified.
+
+**Document all API endpoints** with proper request/response examples and error codes.
+
+**Comment complex business logic** especially around quiz scoring, auto-marking algorithms, and role-based access control.
+
+**Maintain user guides** as specified in the user-friendliness requirements to help users understand system features.
+
+**Document accessibility features** and WCAG compliance measures implemented in the interface.
+
+## 🔒 Security & Compliance Requirements
+
+**Implement audit logging** for all user authentication events and endpoint usage as specified in observability requirements.
+
+**Ensure browser compatibility** with Google Chrome, Microsoft Edge, and Mozilla Firefox (≥90% user coverage).
+
+**Follow data protection principles** with proper session management and secure data transmission.
+
+**Implement role-based access control** ensuring students can only access their own data and admins can manage quiz content appropriately.
+
+**Validate all user inputs** on both frontend and backend to prevent injection attacks and ensure data integrity.
+
+## 🎯 Performance & Quality Standards
+
+**Monitor and optimize** to meet the specified performance metrics for page load times and UI responsiveness.
+
+**Implement proper error handling** with user-friendly error messages that guide users toward resolution.
+
+**Ensure quiz timeframe enforcement** is accurate and prevents submission outside allowed windows.
+
+**Optimize database queries** to handle multiple concurrent quiz attempts efficiently.
+
+**Implement progressive loading** for large datasets such as quiz results and student attempt histories.
+
+## 🧠 AI Behavior Rules
+
+**Never assume missing context about QuizHub requirements.** Always reference the specification document when uncertain about feature behavior.
+
+**Never hallucinate libraries or frameworks** beyond those specified in the organizational requirements (React, TypeScript, Material UI, Supabase, C#, ASP.NET, PostgreSQL).
+
+**Always confirm that implementations match the specified data model relationships** before proceeding with development.
+
+**Never delete or overwrite existing code** unless explicitly instructed or as part of a documented task in TASK.md.
+
+**Validate all features against their corresponding user stories** to ensure acceptance criteria are met.
+
+**Ask for clarification** when requirements conflict or when implementation details are not specified in the documentation.
